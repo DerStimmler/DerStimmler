@@ -15,11 +15,14 @@
 <a href="https://stimmler.xyz" target="_blank">
   <img src=https://img.shields.io/badge/homepage-3d3d3d.svg?&style=for-the-badge&logoColor=white alt=homepage />
 </a>
-<a href="https://github.com/DerStimmler" target="_blank">
+<!-- <a href="https://github.com/DerStimmler" target="_blank">
   <img src=https://img.shields.io/badge/github-24292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github />
-</a>
+</a> -->
 <a href="https://stackoverflow.com/users/12893258/stimmler" target="_blank">
   <img src=https://img.shields.io/badge/stackoverflow-F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white alt=stackoverflow />
+</a>
+<a href="https://codepen.io/Stimmler" target="_blank">
+  <img src=https://img.shields.io/badge/codepen-000000.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen />
 </a>
 <a href="https://hashnode.com/@Stimmler" target="_blank">
   <img src=https://img.shields.io/badge/hashnode-2962FF.svg?&style=for-the-badge&logo=hashnode&logoColor=white alt=hashnode />
@@ -31,7 +34,7 @@
   <img src=https://img.shields.io/badge/medium-292929.svg?&style=for-the-badge&logo=medium&logoColor=white alt=medium />
 </a>
 <a href="https://twitter.com/timschneider01" target="_blank">
-  <img src=https://img.shields.io/badge/twitter-00acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter />
+  <img src=https://img.shields.io/badge/X-000000.svg?&style=for-the-badge&logo=x&logoColor=white alt=X />
 </a>
 <a href="https://www.linkedin.com/in/tim-schneider-0122a8197/" target="_blank">
   <img src=https://img.shields.io/badge/linkedin-1E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin />
