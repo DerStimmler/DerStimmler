@@ -15,21 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Generate GIFs
+      - name: Generate snake GIFs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-snake.svg
             dist/github-contribution-snake-dark.svg?palette=github-dark
-
-      - name: Deploy to Profile Branch
-        uses: peaceiris/actions-gh-pages@v3
+      
+      - name: Upload snake artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: profile
-          commit_message: "docs(readme): update snake animation"
+          name: snake
+          path: dist/
+
   
   generate-stats:
     runs-on: ubuntu-latest
@@ -61,10 +60,35 @@ jobs:
       #     path: dist/pin-readme-tools-github-readme-stats.svg
       #     token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy to Profile Branch
+      - name: Upload stats artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stats
+          path: dist/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - generate-contribution-snake
+      - generate-stats
+
+    steps:
+      - name: Download snake
+        uses: actions/download-artifact@v4
+        with:
+          name: snake
+          path: dist/
+
+      - name: Download stats
+        uses: actions/download-artifact@v4
+        with:
+          name: stats
+          path: dist/
+
+      - name: Deploy to profile branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: profile
-          commit_message: "docs(readme): update stats"
+          commit_message: "docs(readme): update assets"
