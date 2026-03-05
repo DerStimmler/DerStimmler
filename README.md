@@ -115,17 +115,14 @@
 ## <img src="assets/Stats.gif" height="40" align="center" alt="stats-logo"> Stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DerStimmler/DerStimmler/output/github-contribution-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DerStimmler/DerStimmler/output/github-contribution-snake.svg">
-  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/DerStimmler/DerStimmler/output/github-contribution-snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/github-contribution-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/github-contribution-snake.svg">
+  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/github-contribution-snake.svg">
 </picture>
 
-<a href="#">
-<img alt="github-stats" align="center" src="https://github-readme-stats.vercel.app/api?username=DerStimmler&hide_border=false&count_private=true&show_icons=true&hide_title=true&hide_rank=true&theme=transparent&title_color=019017&text_color=019017&icon_color=019017">
-</a>
-<a href="#">
-<img alt="github-languages" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DerStimmler&hide_border=false&include_all_commits=true&count_private=true&layout=compact&hide=java&hide_title=false&langs_count=6&theme=transparent&title_color=019017&text_color=019017&icon_color=019017">
-</a>
+![Stats](https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/stats.svg)
+![Top Languages](https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/top-langs.svg)
+<!-- ![Pinned](https://raw.githubusercontent.com/DerStimmler/DerStimmler/profile/pin-readme-tools-github-readme-stats.svg) -->
 
 <!-- ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=DerStimmler&theme=tokyonight&hide_border=false&count_private=true&show_icons=true) -->
 

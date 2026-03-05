@@ -1,0 +1,70 @@
+name: Update Profile
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-contribution-snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Generate GIFs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-snake.svg
+            dist/github-contribution-snake-dark.svg?palette=github-dark
+
+      - name: Deploy to Profile Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: profile
+          commit_message: "docs(readme): update snake animation"
+  
+  generate-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide_border=false&count_private=true&show_icons=true&hide_title=true&hide_rank=true&theme=transparent&title_color=019017&text_color=019017&icon_color=019017
+          path: dist/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&hide_border=false&include_all_commits=true&count_private=true&layout=compact&hide=java&hide_title=false&langs_count=6&theme=transparent&title_color=019017&text_color=019017&icon_color=019017
+          path: dist/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Generate pin card
+      #   uses: readme-tools/github-readme-stats-action@v1
+      #   with:
+      #     card: pin
+      #     options: username=readme-tools&repo=github-readme-stats
+      #     path: dist/pin-readme-tools-github-readme-stats.svg
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to Profile Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: profile
+          commit_message: "docs(readme): update stats"
