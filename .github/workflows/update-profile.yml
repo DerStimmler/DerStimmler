@@ -42,7 +42,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&hide_border=false&count_private=true&show_icons=true&hide_title=true&hide_rank=true&theme=transparent&title_color=019017&text_color=019017&icon_color=019017
           path: dist/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_README_STATS_PAT }}
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -50,7 +50,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_border=false&include_all_commits=true&count_private=true&layout=compact&hide=java&hide_title=false&langs_count=6&theme=transparent&title_color=019017&text_color=019017&icon_color=019017
           path: dist/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_README_STATS_PAT }}
 
       # - name: Generate pin card
       #   uses: readme-tools/github-readme-stats-action@v1
@@ -58,7 +58,7 @@ jobs:
       #     card: pin
       #     options: username=readme-tools&repo=github-readme-stats
       #     path: dist/pin-readme-tools-github-readme-stats.svg
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     token: ${{ secrets.GH_README_STATS_PAT }}
 
       - name: Upload stats artifact
         uses: actions/upload-artifact@v4
