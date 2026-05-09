@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Tim Schneider's GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 42, Total Commits  (last year) : 261, Total PRs: 194, Total Issues: 119, Contributed to (last year): 20</desc>
+        <title id="titleId">Tim Schneider's GitHub Stats, Rank: B+</title>
+        <desc id="descId">Total Stars Earned: 42, Total Commits  (last year) : 207, Total PRs: 166, Total Issues: 115, Contributed to (last year): 14</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 87.01822158893727;
+        stroke-dashoffset: 96.75152736899946;
       }
     }
   
@@ -152,7 +152,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >261</text>
+      >207</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -167,7 +167,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >194</text>
+      >166</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -182,7 +182,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >119</text>
+      >115</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -197,7 +197,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >20</text>
+      >14</text>
     </g>
   </g>
     </svg>
